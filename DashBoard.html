@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LARSA CMS</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .card {
+            height: 140px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .card .card-body {
+            padding-bottom: 60px;
+            text-align: left;
+            .card-title {
+                font-size: 24px;
+            }
+            .card-text {
+                font-size: 15px;
+            }
+        }   
+        #icon {
+            font-size: 36px;
+            color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 30px;
+            left: 185px;
+        }
+        .card-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .card-footer a{
+            color: white;
+            text-decoration: none;
+            display: block;
+            height: 30px;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+            font-size: small;
+            background-color: rgba(0, 0, 0, 0.1);
+
+        }
+        .sidebar {
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background: #f2f3f3;
+            padding-top: 65px;
+            font-size: 15px;
+            border-right: 1px solid #6b6262;
+            border-top: 1px solid rgba(0, 0, 0, 0.125)
+        }
+        .sidebar li {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+          }
+        .sidebar a {
+            color: #181717;
+            display: block;
+            padding: 4px 4px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background: #4d78a3;
+        }  
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+       .navbar{
+          display: fixed;
+          z-index: 1;
+          width: 100%;
+          top: 0%;
+          display: flex;
+       }
+    </style>
+</head>
+<body>
+       <!-- Nav Bar-->
+       <nav class="shadow-sm navbar navbar-info bg-light">
+            <div class="container-fluid">
+               <div class="d-flex ">
+                  <span class="navbar-brand mb-0 h1"></i><i class='fa fa-bars' style='font-size:24px' aria-hidden="true"></i>LARSA CMS</span>
+               </div>
+               <div class="d-flex">                
+                  <img src="path_to_image.png" alt="Profile" class="rounded-circle ml-2" style="width: 30px; height: 30px;">
+                 sss<span class="navbar-text"><b>Rauf Khalid</b></span>
+               </div>
+          </div>
+       </nav>
+    <div class="d-flex">
+        <div class="sidebar" class="list-style-type:none;">
+            <span>Navigation</span>
+            <li><a href="#" class="active"><i class="fa fa-laptop"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-search"></i> Inquiry Record</a></li>
+            <li><a href="#"><i class="fas fa-book"></i> Full Ledger</a></li>
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><span class="caret"><i class="fas fa-money-check-alt"></i>Refund</span></a>
+              <ul class="dropdown-menu" style="list-style-type:none;">
+                 <li><a class="dropdown-item" href="#">Page 1-1</a></li>
+                 <li><a class="dropdown-item" href="#">Page 1-2</a></li>
+                 <li><a class="dropdown-item" href="#">Page 1-3</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"> <span class="caret"><i class="fas fa-file-alt"></i> Accounts Statements</span></a>
+                <ul class="dropdown-menu" style="list-style-type:none;">
+                    <li><a class="dropdown-item" href="#">Sub-item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Sub-item 1</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fas fa-book-open"></i> My Ledger</a></li>
+            <li><a href="#"><i class="fas fa-clock"></i> Pending Record</a></li>
+            <li><a href="#"><i class="fas fa-money-bill-wave"></i> Pending Cash/Pmt/JV</a></li>
+            <br>
+            <span>Setting</span>
+            <li><a href="#"><i class="fas fa-users"></i> Manage User</a></li>
+            <li><a href="#"><i class="fas fa-cubes"></i> Assets Category</a></li>
+            <li><a href="#"><i class="fas fa-plus"></i> New Account</a></li>
+            <li><a href="#"><i class="fas fa-shield-alt"></i> Pages Authorization</a></li>
+            <br><br><br>
+            <div  id="login" class="p-3 px-4 mt-auto hide-on-minified">
+                <a href="/logout" class="btn btn-secondary d-block w-100 fw-600 rounded-pill">
+                    <i class="fa fa-sign-out-alt me-1 ms-n1 opacity-5"></i> Logout
+                </a>
+            </div>   
+        </div>
+        <!-- Dash Boards-->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">             
+                    <div class="col-md-3">
+                        <div class="card bg-info text-white">
+                            <div class="card-body">
+                                    <h5 class="card-title">353</h5>
+                                    <p class="card-text">Total Tickets</p>
+                                    <i class="fas fa-ticket-alt" id="icon"></i>                               
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">0</h5>
+                                <p class="card-text">Today Tickets</p>
+                                <i class="	fas fa-user-friends" id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-dark">
+                            <div class="card-body">
+                                <h5 class="card-title">0 PKR</h5>
+                                <p class="card-text">Today Receivable</p>
+                                <i class='fas fa-money-check-alt' id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">47709846.00 PKR</h5>
+                                <p class="card-text">Total Receivable</p>
+                                <i class='fas fa-money-check-alt' id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                    <h5 class="card-title">41855168.40 PKR</h5>
+                                    <p class="card-text">Total Payable</p>
+                                    <i class="fas fa-money-bill-alt" id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-warning text-dark">
+                            <div class="card-body">
+                                <h5 class="card-title">0 PKR</h5>
+                                <p class="card-text">Today Payable</p>
+                                <i class="fas fa-money-bill-alt" id="icon"></i>
+                           </div>
+                           <div class="card-footer p-0">
+                                <a href="#" class="text-white;" >More info<i class="fas fa-arrow-circle-right"></i> </a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">0 PKR</h5>
+                                <p class="card-text">Today Profit</p>
+                                <i class="fas fa-chart-bar" id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-success text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">5854677.60 PKR</h5>
+                                <p class="card-text">Total Profit</p>
+                                <i class="fas fa-chart-pie" id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-danger text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">1</h5>
+                                <p class="card-text">Pending Tickets & Other Services</p>
+                                <i class="fas fa-shopping-cart" id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card bg-secondary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title">1</h5>
+                                <p class="card-text">Pending Cash & Payment</p>
+                                <i class="fas fa-money-bill-wave" id="icon"></i>
+                            </div>
+                            <div class="card-footer p-0">
+                                <a href="#" class="text-white;">More info<i class="fas fa-arrow-circle-right"></i> </a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
